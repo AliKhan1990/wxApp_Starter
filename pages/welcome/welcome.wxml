@@ -1,0 +1,7 @@
+<view class="container">
+    <image class="user-avatar" src="/images/2.png"></image>
+    <text>Hello,WXApp</text>
+    <view>
+        <text>Start!GO~</text>
+    </view>
+</view>
