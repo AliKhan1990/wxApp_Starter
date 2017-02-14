@@ -1,0 +1,21 @@
+<!--先静后动原则-->
+<view class="container">
+    <image class="head-image" src="/source/images/post/bl.png"></image>
+    <view class="author-data">
+        <image class="avatar" src="/source/images/avatar/2.png"></image>
+        <text class="author">七月</text>
+        <text class="const-text">发表于</text>
+        <text class="date">三年前</text>
+    </view>
+    <text class="title">正是虾肥蟹壮时</text>
+    <view class="tool">
+        <view class="circle-img">
+            <image src="/source/images/icon/collection.png"></image>
+            <image class="share-img" src="/source/images/icon/share.png"></image>
+        </view>
+        <view class="horizon"></view>
+    </view>
+    <text class="detail">
+        菊黄蟹正肥，品尝秋之味。徐志摩把,“看初花的荻芦”和“到楼外楼吃蟹”,并列为秋天来杭州不能错过的风雅之事；用林妹妹的话讲是“螯封嫩玉双双满”
+    </text>
+</view>
