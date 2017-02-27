@@ -9,7 +9,7 @@ Page({
         var postId = event.currentTarget.dataset.postid;
         console.log("TAP，"+postId);
         wx.navigateTo({
-            url:'post-detail/post-detail'
+            url:'post-detail/post-detail?id' + postId
         });
     },
     onLoad:function(){

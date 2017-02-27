@@ -1,6 +1,7 @@
 <!--先静后动原则-->
 <view class="container">
     <image class="head-image" src="/source/images/post/bl.png"></image>
+    <image class="audio" src="/source/images/music/music-start.png"></image>
     <view class="author-data">
         <image class="avatar" src="/source/images/avatar/2.png"></image>
         <text class="author">七月</text>
