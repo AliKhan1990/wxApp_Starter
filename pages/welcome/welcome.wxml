@@ -1,7 +1,7 @@
 <view class="container">
     <image class="user-avatar" src="/source/images/avatar/3.png"></image>
     <text class="user-name">Hello,WXApp!</text>
-    <view class="w-container" bindtap="onTap">
+    <view class="w-container" catchtap="onContainerTap">
         <text class="w-text">Start!</text>
     </view>
 </view>

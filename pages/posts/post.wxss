@@ -1,3 +1,4 @@
+/*引入wxsss*/
 @import "post-item/post-item-template.wxss";
 swiper{
     width: 100%;

@@ -7,7 +7,8 @@ var local_database =[
         readied:"112",
         collected:"96",
         avatar:"/source/images/avatar/1.png",
-        postId:'1'
+        postId:'1',
+        author:'DingDing'
     },
     {
         date: "Nov 20 2016",
@@ -18,7 +19,8 @@ var local_database =[
         collected: 92,
         author: "迷的城",
         avatar: "/source/images/avatar/1.png",
-        postId:'2'
+        postId:'2',
+        author:'Alex'
     },
     {
         //按住alt + shift + F 可以格式化代码样式
@@ -30,7 +32,8 @@ var local_database =[
         date: "Nov 12 2016",
         dateTime: "三天前",
         avatar: "/source/images/avatar/3.png",
-        postId:'3'
+        postId:'3',
+        author:'Linda'
     },
     {
         title: "微信·小程序开发工具安装指南",
@@ -41,7 +44,8 @@ var local_database =[
         author: "猫是猫的猫",
         date: "Nov 20 2016",
         avatar: "/source/images/avatar/5.png",
-        postId:'4'
+        postId:'4',
+        author:'Qunar'
     },
     {
         title: "从视觉到触觉 这款VR手套能给你真实触感",
@@ -52,7 +56,8 @@ var local_database =[
         author: "深白色",
         date: "Nov 20 2016",
         avatar: "/source/images/avatar/3.png",
-        postId:'5'
+        postId:'5',
+        author:'BigDick'
     }
 ];
 

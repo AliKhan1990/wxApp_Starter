@@ -2,7 +2,7 @@
     <view class="post-container">
         <view class="post-author-date">
             <image wx:if="{{true}}" class="post-author" src="{{avatar}}"></image>
-            <text class="post-date">{{idx+1+".  "}}{{date}}</text>
+            <text class="post-date">{{author+".  "}}{{date}}</text>
         </view>
         <text class="post-title">{{title}}</text>
         <image class="post-image" src="{{imgSrc}}"></image>

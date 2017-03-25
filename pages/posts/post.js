@@ -1,7 +1,10 @@
 var postsData = require("../../data/posts-data");
 Page({
     data:{
-
+        //小程序会读取data对象来做数据绑定
+    },
+    onPullDownRefresh:function(){
+      wx.stopPullDownRefresh();
     },
     imPath:"",
     onPostTap:function(event){
@@ -12,8 +15,9 @@ Page({
             url:'post-detail/post-detail?id' + postId
         });
     },
-    onLoad:function(){
+    onLoad:function(options){
         console.log("onLoad");
+        //setData方法初始化数据；
         this.setData({post_key:postsData.postList});
     },
     onReady:function(){
