@@ -2,9 +2,6 @@
 var postData = require('../../../data/posts-data');
 
 Page({
-  data:{
-
-  },
    onLoad:function(option){
        var postId = option.id;
        this.setData({
@@ -36,14 +33,58 @@ Page({
      //取反操作
      postCollected = !postCollected;
      postsCollected[this.data.currentPostId] = postCollected;
-     wx.setStorageSync('posts_collected',postsCollected);
-     this.setData({
-       collected:postCollected
+     this.collectedConfirm(postsCollected,postCollected);
+   },
+   collectedConfirm:function(postsCollected,postCollected){
+    console.log(postCollected)
+    var that = this;
+    var text = postCollected?"是否收藏?":"是否取消收藏？";
+     wx.showModal({
+       title:"收藏",
+       content:text,
+       showCancel:true,
+       confirmText:"確定",
+       confirmColor:"#b0d1bd",
+       cancelText:"取消",
+       cancelColor:"#333",
+       success:function(res){
+         if(res.confirm){
+           var collectedText = postCollected?"收藏成功":"取消收藏";
+           var collectedIcon = postCollected?"success":"loading";
+           wx.setStorageSync('posts_collected',postsCollected);
+           that.setData({
+             collected:postCollected
+           });
+           that.collectedStat(collectedText,collectedIcon)
+         }
+       }
      })
-     console.log(this.data.collected);
+   },
+   collectedStat:function(collectedText,collectedIcon){
+     wx.showToast({
+        title:collectedText,
+        icon:collectedIcon,
+        duration:800,
+        mask:true
+     })
    },
    onShareTap:function(){
-     //clearStorageSync
-    //wx.removeStorageSync("key");
+     var itemLists = [
+       "分享到微信好友",
+       "分享到朋友圈"
+     ];
+     wx.showActionSheet({
+       itemList:itemLists,
+       itemColor:"#405f80",
+       success:function(res){
+         //res.cancle用戶點擊取消
+         //res.tapIndex用戶點擊
+         wx.showModal({
+           title:itemLists[res.tapIndex],
+           content:"現在無法實現分享功能"
+         });
+       }
+     })
+
    }
 });
