@@ -3,5 +3,6 @@
     "pages/posts/post"
   ],
   "navigationBarBackgroundColor":"#b0d1bd",
-  "navigationBarTitleText": "新闻"
+  "navigationBarTitleText": "新闻",
+  "enablePullDownRefresh":true
 }
