@@ -1,5 +1,5 @@
 <import src="post-detail-item/post-detail-item.wxml" />
 <!--先静后动原则-->
 <view class="container">
-  <template is="post-detail-item" data="{{detailData,collected,isPlayingMusic}}"/>
+  <template is="post-detail-item" data="{{detailData,collected,isPlayingStatus,currentPlaying}}"/>
 </view>

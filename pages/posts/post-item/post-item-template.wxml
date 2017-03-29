@@ -8,7 +8,7 @@
         <image class="post-image" src="{{imgSrc}}"></image>
         <text class="post-content">{{content}}</text>
         <view class="post-icon-container">
-            <image class="post-icon" src="/source/images/icon/chat.png"></image>
+            <image class="post-icon" src="{{posts_collected[postId]?'/source/images/icon/star.png':'/source/images/icon/chat.png'}}"></image>
             <text class="post-like-count">{{reading}}</text>
             <image class="post-icon" src="/source/images/icon/view.png"></image>
             <text class="post-like-count">{{collection}}</text>

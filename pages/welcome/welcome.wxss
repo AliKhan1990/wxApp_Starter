@@ -11,6 +11,10 @@
     height:80rpx;
     border-radius: 5rpx;
     text-align: center;
+    margin-bottom:20rpx;
+}
+.w-container:nth-last-of-type(1){
+    background-color: inherit;
 }
 .user-name{
     font-size: 32rpx;

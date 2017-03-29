@@ -1,7 +1,13 @@
 <view class="container">
     <image class="user-avatar" src="/source/images/avatar/3.png"></image>
-    <text class="user-name">Hello,WXApp!</text>
+    <text class="user-name">Hello～小程序!</text>
     <view class="w-container" catchtap="onContainerTap">
         <text class="w-text">Start!</text>
+    </view>
+    <view class="w-container" catchtap="onContainerTap">
+        <text class="w-text" catchtap="onContainerMovieTap">GO!</text>
+    </view>
+    <view class="w-container" catchtap="onContainerTap">
+        <text class="w-text" catchtap="clearStorage">清除緩存</text>
     </view>
 </view>

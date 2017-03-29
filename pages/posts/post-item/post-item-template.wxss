@@ -44,6 +44,9 @@
 }
 .post-icon-container{
     font-size: 13px;
+    padding-left:20rpx;
+    padding-bottom:10rpx;
+
 }
 .post-icon{
     height: 16px;

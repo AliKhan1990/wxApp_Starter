@@ -1,0 +1,20 @@
+App({
+  globalData:{
+    g_currentMusikPlayingId:null,
+    g_isMusicPlaying:false,
+    g_getPostsColleted:wx.getStorageSync("posts_collected")
+  },
+  //应用启动
+  onLaunch:function(){
+    console.log("onLaunch");
+  },
+  //应用显示
+  onShow:function(){
+    console.log(this.globalData.g_getPostsColleted);
+    console.log("onShow");
+  },
+  //后台运行
+  onHide:function(){
+    console.log("onHide");
+  }
+})

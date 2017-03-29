@@ -8,7 +8,14 @@ Page({
             url:"../posts/post"
         });
     },
-  
+    clearStorage:function(){
+      wx.clearStorage();
+    },
+
+    onContainerMovieTap:function(){
+      console.log("Movies,HeiHei~")
+    },
+
     onUnload:function(){
 
     },

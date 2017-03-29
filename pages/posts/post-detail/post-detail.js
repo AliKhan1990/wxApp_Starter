@@ -1,11 +1,17 @@
 //引入数据
 var postData = require('../../../data/posts-data');
+var app = getApp();
+var globalData = app.globalData;
+var playingStatus = app.globalData.g_isMusicPlaying;
+var currentMusikPlayingId = app.globalData.g_currentMusikPlayingId;
 
 Page({
    onLoad:function(option){
        var postId = option.id;
+       var that = this;
        this.setData({
-         isPlayingMusic:false,
+         isPlayingStatus:playingStatus,
+         currentPlaying:postData.postList[currentMusikPlayingId],
          detailData:postData.postList[postId],
          currentPostId:postId
        });
@@ -26,6 +32,48 @@ Page({
          //只要不主动清除会永久存在
          wx.setStorageSync("posts_collected",postsCollected);
        }
+       //通过全局变量来断定播放状态
+       that.setMusikMonitor();
+   },
+   //音乐事件监听:实时更新播放参数
+   setMusikMonitor:function(){
+     var that = this;
+     wx.onBackgroundAudioPlay(function(){
+       playingStatus = true;
+       currentMusikPlayingId = that.data.currentPostId;
+       that.setData({
+         isPlayingStatus:true,
+         currentPlaying:postData.postList[currentMusikPlayingId]
+       });
+       that.playStatus();
+     });
+     wx.onBackgroundAudioPause(function(){
+       playingStatus = false;
+       currentMusikPlayingId = null;
+       that.setData({
+         isPlayingStatus:false,
+         currentPlaying:postData.postList[currentMusikPlayingId]
+       });
+       that.playStatus();
+     });
+   },
+   //获取播放状态
+   playStatus:function(){
+     wx.getBackgroundAudioPlayerState({
+        success: function(res) {
+          var status = res.status
+          var dataUrl = res.dataUrl
+          var currentPosition = res.currentPosition
+          var duration = res.duration
+          var downloadPercent = res.downloadPercent
+          // console.log('status:'+status,
+          //             'dataUrl:'+dataUrl,
+          //             'currentPosition:'+currentPosition,
+          //             'duration:'+duration,
+          //             'downloadPercent:'+downloadPercent
+          //             );
+            }
+        })
    },
    //收藏图标点击事件
    onCollectionTap:function(event){
@@ -94,19 +142,16 @@ Page({
    //音樂播放
    onMusicTap:function(){
      var that = this;
-     var isPlayingMusic = this.data.isPlayingMusic;
-     if(isPlayingMusic){
+     if(playingStatus){
        wx.pauseBackgroundAudio();
      }else{
+       //只可以使用網絡流媒體
        wx.playBackgroundAudio({
-         //只可以使用網絡流媒體
          dataUrl:that.data.detailData.music.url,
          title:that.data.detailData.music.title,
          coverImage:that.data.detailData.music.coverImage
        });
      }
-     that.setData({
-       isPlayingMusic:!isPlayingMusic
-     });
+     playingStatus = !playingStatus;
    }
 });
