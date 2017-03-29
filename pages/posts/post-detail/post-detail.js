@@ -5,6 +5,7 @@ Page({
    onLoad:function(option){
        var postId = option.id;
        this.setData({
+         isPlayingMusic:false,
          detailData:postData.postList[postId],
          currentPostId:postId
        });
@@ -28,6 +29,9 @@ Page({
    },
    //收藏图标点击事件
    onCollectionTap:function(event){
+      this.getPostsCollecedSync();
+   },
+   getPostsCollecedSync:function(){
      var postsCollected = wx.getStorageSync("posts_collected");
      var postCollected = postsCollected[this.data.currentPostId];
      //取反操作
@@ -68,6 +72,7 @@ Page({
         mask:true
      })
    },
+   //share Event
    onShareTap:function(){
      var itemLists = [
        "分享到微信好友",
@@ -85,6 +90,23 @@ Page({
          });
        }
      })
-
+   },
+   //音樂播放
+   onMusicTap:function(){
+     var that = this;
+     var isPlayingMusic = this.data.isPlayingMusic;
+     if(isPlayingMusic){
+       wx.pauseBackgroundAudio();
+     }else{
+       wx.playBackgroundAudio({
+         //只可以使用網絡流媒體
+         dataUrl:that.data.detailData.music.url,
+         title:that.data.detailData.music.title,
+         coverImage:that.data.detailData.music.coverImage
+       });
+     }
+     that.setData({
+       isPlayingMusic:!isPlayingMusic
+     });
    }
 });

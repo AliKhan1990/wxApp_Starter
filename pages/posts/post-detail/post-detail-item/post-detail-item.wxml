@@ -1,6 +1,6 @@
 <template name="post-detail-item">
-  <image class="head-image" src="{{detailData.imgSrc}}"></image>
-  <image class="audio" src="/source/images/music/music-start.png"></image>
+  <image class="head-image" src="{{isPlayingMusic?detailData.music.coverImg:detailData.imgSrc}}"></image>
+  <image catchtap="onMusicTap" class="audio" src="{{isPlayingMusic?'/source/images/music/music-stop.png':'/source/images/music/music-start.png'}}"></image>
   <view class="author-data">
       <image class="avatar" src="{{detailData.avatar}}"></image>
       <text class="author">{{detailData.author}}</text>
