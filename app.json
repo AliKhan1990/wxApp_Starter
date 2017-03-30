@@ -2,9 +2,32 @@
   "pages": [
     "pages/welcome/welcome",
     "pages/posts/post",
-    "pages/posts/post-detail/post-detail"
+    "pages/posts/post-detail/post-detail",
+    "pages/douban/douban-movies",
+    "pages/myself/myself"
   ],
   "window":{
     "navigationBarBackgroundColor":"#b0d1bd"
-  } 
+  } ,
+  "tabBar": {
+    "borderStyle":"black",
+    "backgroundColor":"#eee",
+    "selectedColor":"#b0d1bd",
+    "list": [{
+      "pagePath": "pages/posts/post",
+      "text": "新闻",
+      "iconPath":"source/images/icon/news.png",
+      "selectedIconPath":"source/images/icon/news-selected.png"
+    },{
+      "pagePath": "pages/douban/douban-movies",
+      "text": "电影",
+      "iconPath":"source/images/icon/movies.png",
+      "selectedIconPath":"source/images/icon/movies-selected.png"
+    },{
+      "pagePath": "pages/myself/myself",
+      "text":"关于",
+      "iconPath":"source/images/icon/about.png",
+      "selectedIconPath":"source/images/icon/about-selected.png"
+    }]
+  }
 }

@@ -5,9 +5,6 @@
         <text class="w-text">Start!</text>
     </view>
     <view class="w-container" catchtap="onContainerTap">
-        <text class="w-text" catchtap="onContainerMovieTap">GO!</text>
-    </view>
-    <view class="w-container" catchtap="onContainerTap">
         <text class="w-text" catchtap="clearStorage">清除緩存</text>
     </view>
 </view>
