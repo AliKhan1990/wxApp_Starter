@@ -1,0 +1,13 @@
+<import src="../douban-movie-item/movie-item-template.wxml" />
+<template name="movieGridTemplate">
+  <scroll-view  class="grid-container"
+                scroll-y="true"
+                bindscrolltolower = "onScrollLower"
+                >
+    <block wx:for="{{movies}}" wx:for-item="movie" wx:key="movie-detail">
+      <view class="movie-sigle">
+        <template is="movieItemTemplate" data="{{...movie}}" />
+      </view>
+    </block>
+  </scroll-view>
+</template>

@@ -1,0 +1,23 @@
+<import src="../douban-movie-item/movie-item-template.wxml" />
+<template name="movieListTemplate">
+    <view class="movie-list-container">
+      <view class="inner-container">
+        <view class="movie-head">
+          <text class="slogan" wx:if="{{categoryTitle=='inTheaters'}}">正在热映</text>
+          <text class="slogan" wx:if="{{categoryTitle=='comingSoon'}}">即将上演</text>
+          <text class="slogan" wx:if="{{categoryTitle=='top250'}}">TOP250</text>
+          <view class="more" catchtap="onMoreTap" data-category="{{categoryTitle}}">
+            <text class="more-text">更多</text>
+            <image class="more-img" src="/source/images/icon/arrow-right.png"></image>
+          </view>
+        </view>
+        <scroll-view scroll-x="true" style="width:100%;"  scroll-with-animation="true">
+          <view class="movies-item-container" id="movies-item">
+            <block wx:for="{{movies}}" wx:for-index="{{index}}" wx:for-item="movie" wx:key="movieList">
+              <template is="movieItemTemplate" data="{{...movie,index}}" />
+            </block>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+</template>

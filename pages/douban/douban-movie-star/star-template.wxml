@@ -1,10 +1,18 @@
 <template name="starsTemplate">
-  <view>
-    <image src="/source/images/icon/star.png"></image>
-    <image src="/source/images/icon/star.png"></image>
-    <image src="/source/images/icon/star.png"></image>
-    <image src="/source/images/icon/star.png"></image>
-    <image src="/source/images/icon/chat.png"></image>
-    <text></text>
-  <view>
+  <view class="star-cantainer">
+  <view class="stars">
+    <block wx:for="{{stars}}" wx:for-item="istar" wx:key="star">
+      <image wx:if="{{istar==1}}" src="/source/images/icon/star.png"></image>
+      <image wx:elif="{{istar==2}}" src="/source/images/icon/half-star.png"></image>
+      <image wx:else src="/source/images/icon/none-star.png"></image>
+    </block>
+
+    <text class="star-score">{{average?average:"暂无评分"}}</text>
+  </view>
+    <view class="movieClass">
+      <block wx:for="{{movieKind}}" wx:key="movieKind" wx:for-item="class">
+        <text>{{class}}</text>
+      </block>
+    </view>
+  </view>
 </template>

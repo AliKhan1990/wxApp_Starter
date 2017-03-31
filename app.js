@@ -2,7 +2,8 @@ App({
   globalData:{
     g_currentMusikPlayingId:null,
     g_isMusicPlaying:false,
-    g_getPostsColleted:wx.getStorageSync("posts_collected")
+    g_getPostsColleted:wx.getStorageSync("posts_collected"),
+    g_doubanAPI:"https://api.douban.com/"
   },
   //应用启动
   onLaunch:function(){

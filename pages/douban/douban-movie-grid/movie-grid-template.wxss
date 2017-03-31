@@ -1,0 +1,9 @@
+@import "../douban-movie-item/movie-item-template.wxss";
+.movie-sigle{
+  float:left;
+  padding-bottom: 40rpx;
+}
+.grid-container{
+  height:1300rpx;
+  margin:40rpx 0 40rpx 15rpx;
+}

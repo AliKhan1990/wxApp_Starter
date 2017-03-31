@@ -1,12 +1,12 @@
 <import src="post-item/post-item-template" />
-<view>
+<view class="news-container">
     <swiper bindtap="onSwiperTap" vertical="{{false}}" indicator-dots="true" autoplay="true">
         <swiper-item><image data-postId="4" src="/source/images/iqiyi.png"></image></swiper-item>
         <swiper-item><image data-postId="3" src="/source/images/vr.png"></image></swiper-item>
         <swiper-item><image data-postId="2" src="/source/images/wx.png"></image></swiper-item>
     </swiper>
 
-    <block wx:for="{{post_key}}" wx:for-item="item" wx:for-index="idx">
+    <block wx:for="{{post_key}}" wx:key="listItem" wx:for-item="item" wx:for-index="idx">
     <!-- template并非为真实element，在DOM中不显示，所以必须在外部套一个view标签*/ -->
         <view catchtap="onPostTap" data-postId="{{item.postId}}">
             <template is="postItem" data="{{...item,posts_collected}}" />

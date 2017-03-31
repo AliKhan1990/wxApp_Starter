@@ -1,8 +1,8 @@
-<import src="../douban-movie-star/star-template.wxml">
-<template name="movie-item-template">
-    <view>
-      <image src=""></image>
-      <text>你的名字</text>
-      <template is="starsTemplate"></template>
+<import src="../douban-movie-star/star-template.wxml" />
+<template name="movieItemTemplate">
+    <view class="movie-item-container">
+      <image class="movie-image" src="{{coverUrl}}"></image>
+      <text class="movie-title">{{title}}</text>
+      <template is="starsTemplate" data="{{average,movieKind,stars}}"/>
     </view>
 </template>

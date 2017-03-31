@@ -1,0 +1,7 @@
+@import "douban-movie-list/movie-list-template.wxss"
+.movie-index-container{
+  background:#f2f2f2;
+}
+.movie-index-container view{
+  margin-bottom:20rpx;
+}

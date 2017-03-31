@@ -1,3 +1,12 @@
-<view>
-  <text>Hello!</text>
+<import src="douban-movie-list/movie-list-template" />
+<view class="movie-index-container">
+  <view>
+    <template is="movieListTemplate" data="{{categoryTitle,...inTheaters}}"/>
+  </view>
+  <view>
+    <template is="movieListTemplate" data="{{categoryTitle,...comingSoon}}"/>
+  </view>
+  <view>
+    <template is="movieListTemplate" data="{{categoryTitle,...top250}}"/>
+  </view>
 </view>

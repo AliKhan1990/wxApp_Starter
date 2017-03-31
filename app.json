@@ -4,7 +4,8 @@
     "pages/posts/post",
     "pages/posts/post-detail/post-detail",
     "pages/douban/douban-movies",
-    "pages/myself/myself"
+    "pages/myself/myself",
+    "pages/douban/douban-more-movies/more-movies"
   ],
   "window":{
     "navigationBarBackgroundColor":"#b0d1bd"
