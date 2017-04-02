@@ -17,8 +17,16 @@ function convertToStarsArray(stars) {
   return array;
 }
 
-function http(url, callBack, method) {
+function http(url, callBack, showToast) {
   douban_limit();
+  if(showToast){
+    wx.showLoading({
+      title:"正在加载",
+      icon:"loading",
+      duration:10000
+    });
+    wx.showNavigationBarLoading();
+  }
   wx.request({
     url: url,
     method: 'GET',
@@ -27,6 +35,10 @@ function http(url, callBack, method) {
     },
     success: function (res) {
       callBack(res.data.subjects);
+      if(showToast){
+        wx.hideLoading();
+        wx.showNavigationBarLoading();
+      }
     },
     fail: function (error) {
       console.log(error)

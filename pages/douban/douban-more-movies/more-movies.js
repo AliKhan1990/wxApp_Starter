@@ -8,25 +8,24 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     var categoryID = options.category;
     var dataUrl = "";
-    var requestCount = "";
     if(categoryID=="inTheaters"){
       categoryID = "正在上映";
-      dataUrl = app.globalData.g_doubanAPI + "/v2/movie/in_theaters"+requestCount;
+      dataUrl = app.globalData.g_doubanAPI + "/v2/movie/in_theaters";
     }else if(categoryID=="comingSoon"){
       categoryID = "即将上映";
-      dataUrl = app.globalData.g_doubanAPI + "/v2/movie/coming_soon"+requestCount;
+      dataUrl = app.globalData.g_doubanAPI + "/v2/movie/coming_soon";
     }else{
       categoryID = "TOP250";
-      dataUrl = app.globalData.g_doubanAPI + "/v2/movie/top250"+requestCount;
+      dataUrl = app.globalData.g_doubanAPI + "/v2/movie/top250";
     }
     console.log(categoryID);
     this.setData({
-      isEmpty:false,
+      isEmpty:true,//是否加载刷新的flag
       totalCount:0,
       dataUrl:dataUrl,
       categoryID:categoryID
     });
-    http(dataUrl,that.processDoubanData,null);
+    http(dataUrl,that.processDoubanData,true);
   },
   processDoubanData:function(result){
     var moviesData = [];
@@ -47,15 +46,16 @@ Page({
       }
       moviesData.push(tmp);
     }
-    if(!this.data.isEmpty){
-      totalMovies = moviesData.concat(moviesData);
+    //处理加载数据－－start
+    if(!this.data.isEmpty){//下拉刷新
+      totalMovies = this.data.movies.concat(moviesData);
     }else{
       totalMovies = moviesData;
       this.data.isEmpty = false;
     }
     this.setData({
-      totalCount:this.data.totalCount+20,
-      movies:totalMovies
+      totalCount:this.data.totalCount+20,//请求数据起始点更新
+      movies:totalMovies//更新数据
     })
     console.log(this.data.movies);
   },
@@ -63,7 +63,7 @@ Page({
     var nextUrl = this.data.dataUrl +
                   "?start=" + this.data.totalCount + "&count=20";
     console.log(nextUrl);
-    utils.http(nextUrl,this.processDoubanData);
+    utils.http(nextUrl,this.processDoubanData,true);
   },
   onReady:function(event){
     // 页面渲染完成
