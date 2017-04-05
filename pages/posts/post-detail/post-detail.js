@@ -56,6 +56,15 @@ Page({
        });
        that.playStatus();
      });
+     wx.onBackgroundAudioStop(function(){
+       playingStatus = false;
+       currentMusikPlayingId = null;
+       that.setData({
+         isPlayingStatus:false,
+         currentPlaying:postData.postList[currentMusikPlayingId]
+       });
+       that.playStatus();
+     })
    },
    //获取播放状态
    playStatus:function(){

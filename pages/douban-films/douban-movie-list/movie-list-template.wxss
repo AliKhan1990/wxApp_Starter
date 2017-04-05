@@ -13,9 +13,11 @@
   justify-content: space-between;
   padding: 30rpx 20rpx 22rpx;
   font-size: 24rpx;
-  width:50%;
+  width:725rpx;
 }
-
+  /*很显然有一些交互后，
+    显示不完全的问题，
+    通过设置固定宽高可以解决*/
 .more-text{
   margin-right: 10rpx;
   color:#1f4ba5;
@@ -28,4 +30,8 @@
 .movies-item-container{
   display: flex;
   flex-direction: row;
+}
+#listSwiper{
+  width:100%;
+  height:410rpx;
 }

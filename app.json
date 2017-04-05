@@ -3,9 +3,12 @@
     "pages/welcome/welcome",
     "pages/posts/post",
     "pages/posts/post-detail/post-detail",
-    "pages/douban/douban-movies",
+    "pages/douban-films/douban-movies",
+    "pages/douban-films/douban-more-movies/more-movies",
+    "pages/douban-films/douban-movie-detail/movie-detail",
     "pages/myself/myself",
-    "pages/douban/douban-more-movies/more-movies"
+    "pages/camera-scan/scan",
+    "pages/douban-books/douban-books"
   ],
   "window":{
     "navigationBarBackgroundColor":"#b0d1bd"
@@ -20,10 +23,20 @@
       "iconPath":"source/images/icon/news.png",
       "selectedIconPath":"source/images/icon/news-selected.png"
     },{
-      "pagePath": "pages/douban/douban-movies",
+      "pagePath": "pages/douban-films/douban-movies",
       "text": "电影",
       "iconPath":"source/images/icon/movies.png",
       "selectedIconPath":"source/images/icon/movies-selected.png"
+    },{
+      "pagePath": "pages/camera-scan/scan",
+      "text":"扫码",
+      "iconPath":"source/images/icon/scan.png",
+      "selectedIconPath":"source/images/icon/scan-selected.png"
+    },{
+      "pagePath": "pages/douban-books/douban-books",
+      "text":"图书",
+      "iconPath":"source/images/icon/book.png",
+      "selectedIconPath":"source/images/icon/book-selected.png"
     },{
       "pagePath": "pages/myself/myself",
       "text":"关于",

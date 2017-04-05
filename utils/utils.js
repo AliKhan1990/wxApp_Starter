@@ -34,10 +34,10 @@ function http(url, callBack, showToast) {
       "Content-Type": "json"
     },
     success: function (res) {
-      callBack(res.data.subjects);
+      callBack(res.data);
       if(showToast){
         wx.hideLoading();
-        wx.showNavigationBarLoading();
+        wx.hideNavigationBarLoading();
       }
     },
     fail: function (error) {

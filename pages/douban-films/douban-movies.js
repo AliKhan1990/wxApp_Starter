@@ -6,6 +6,12 @@ var http = utils.http;
 Page({
 
   onLoad:function(event){
+    this.setData({
+      containerShow:true,
+      searchPanelShow:false,
+      searchResultState:true,
+      searchResult:{}
+    });
     const requestStart = "?start=0&count=6";
     let inTheatersURL = doubanAPI+"/v2/movie/in_theaters"+requestStart;
     let comingSoonURL = doubanAPI+"/v2/movie/coming_soon"+requestStart;
@@ -32,6 +38,11 @@ Page({
       },
       success:function(res){
         console.log(res.data.subjects);
+        if(settedKey=="searchResult"){
+          that.setData({
+            searchResultState:false
+          })
+        }
         that.processDoubanData(res.data.subjects,settedKey);//array
       },
       fail:function(error){
@@ -43,6 +54,37 @@ Page({
           })
       }
     });
+  },
+  onBindFocus:function(){
+    console.log("输入状态！");
+    this.setData({
+      containerShow:false,
+      searchPanelShow:true
+    });
+  },
+  onBindBlur:function(){
+    console.log("失去焦点！");
+  },
+  onBindConfirm:function(event){
+    console.log("完成输入！");
+    var searchText = event.detail.value;
+    var searchUrl = doubanAPI+"/v2/movie/search?q="+searchText;
+    this.getMovieListData(searchUrl,"searchResult");
+  },
+  onCancelXTap:function(){
+    this.setData({
+      containerShow:true,
+      searchPanelShow:false
+      // searchResult:{}
+    });
+  },
+  onMovieTap:function(event){
+    let mid = event.currentTarget.dataset.movieid;
+    console.log(mid);
+    wx.navigateTo({
+      url:"douban-movie-detail/movie-detail?mid="+mid
+    });
+
   },
   processDoubanData:function(result,settedKey){
     var moviesData = [];
@@ -58,7 +100,8 @@ Page({
         average:subject.rating.average,
         coverUrl:subject.images.large,
         movieId:subject.id,
-        movieKind:subject.genres
+        movieKind:subject.genres,
+        movieId:subject.id
       }
       moviesData.push(tmp);
     }

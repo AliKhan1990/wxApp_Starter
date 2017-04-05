@@ -27,11 +27,14 @@ Page({
     });
     http(dataUrl,that.processDoubanData,true);
   },
+
   processDoubanData:function(result){
+    var results = result.subjects;
+    console.log(results);
     var moviesData = [];
     var totalMovies = [];
-    for(let idx in result){
-      var subject = result[idx];
+    for(let idx in results){
+      var subject = results[idx];
       var title = subject.title;
       if(title.length >= 6){
         title = title.substring(0,6)+"...";
@@ -64,6 +67,23 @@ Page({
                   "?start=" + this.data.totalCount + "&count=20";
     console.log(nextUrl);
     utils.http(nextUrl,this.processDoubanData,true);
+  },
+  onPullDownRefresh:function(){
+    console.log("re");
+    let refreshUrl = this.data.dataUrl + "?start=0&count=20";
+    this.setData({
+      totalMovies:{},
+      isEmpty:true
+    });
+    http(refreshUrl,that.processDoubanData,true);
+    // wx.stopPullDownRefresh();
+  },
+  onMovieTap:function(event){
+    let mid = event.currentTarget.dataset.movieid;
+    console.log(mid);
+    wx.navigateTo({
+      url:"../douban-movie-detail/movie-detail?mid="+mid
+    });
   },
   onReady:function(event){
     // 页面渲染完成

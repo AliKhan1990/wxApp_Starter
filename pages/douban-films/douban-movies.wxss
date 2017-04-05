@@ -1,0 +1,43 @@
+@import "douban-movie-list/movie-list-template.wxss";
+@import "douban-movie-grid/movie-grid-template.wxss";
+.movie-index-container{
+  background:#f2f2f2;
+}
+.movie-index-container view{
+  margin-bottom:20rpx;
+}
+/*搜索框样式*/
+.search{
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  width: 100%;
+}
+.search-img{
+  margin:auto 0 auto 20px;
+}
+.search input{
+  height: 100%;
+  width: 600rpx;
+  margin-left:20rpx;
+  font-size: 28rpx;
+}
+.placeholder{
+  font-size: 14px;
+  color:#d1d1d1;
+  margin-left: 20rpx;
+}
+.search-panel{
+  position: absolute;
+  top:80rpx;
+}
+.xx-img{
+  height: 30rpx;
+  width: 30rpx;
+  margin: auto 0 auto 10rpx;
+}
+.no-search-img{
+  width: 250rpx;
+  height: 250rpx;
+  margin: 280rpx 0 0 280rpx;
+}

@@ -11,7 +11,7 @@
             <image class="more-img" src="/source/images/icon/arrow-right.png"></image>
           </view>
         </view>
-        <scroll-view scroll-x="true" style="width:100%;"  scroll-with-animation="true">
+        <scroll-view id="listSwiper" scroll-x="true" scroll-with-animation="true">
           <view class="movies-item-container" id="movies-item">
             <block wx:for="{{movies}}" wx:for-index="{{index}}" wx:for-item="movie" wx:key="movieList">
               <template is="movieItemTemplate" data="{{...movie,index}}" />

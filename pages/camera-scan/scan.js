@@ -1,4 +1,4 @@
-// pages/douban/douban-movie-detail/movie-detail.js
+// pages/camera-scan/scan.js
 Page({
   data:{},
   onLoad:function(options){

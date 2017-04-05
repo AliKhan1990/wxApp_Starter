@@ -1,6 +1,6 @@
 <import src="../douban-movie-star/star-template.wxml" />
 <template name="movieItemTemplate">
-    <view class="movie-item-container">
+    <view class="movie-item-container" data-movieId="{{movieId}}" catchtap="onMovieTap">
       <image class="movie-image" src="{{coverUrl}}"></image>
       <text class="movie-title">{{title}}</text>
       <template is="starsTemplate" data="{{average,movieKind,stars}}"/>

@@ -1,0 +1,26 @@
+<import src="douban-movie-list/movie-list-template" />
+<import src="douban-movie-grid/movie-grid-template" />
+<view class="search">
+  <icon class="search-img" type="search" size='13' color="#405f80"></icon>
+  <input type="text" placeholder="美女与野兽"
+         placeholder-class="placeholder" confirm-type="搜索"
+         bindfocus="onBindFocus" bindblur="onBindBlur" bindconfirm="onBindConfirm" />
+  <image src="/source/images/icon/xx.png" class="xx-img" bindtap="onCancelXTap" />
+</view>
+<!-- 视图 -->
+<view wx:if="{{containerShow}}" class="movie-index-container">
+  <view>
+    <template is="movieListTemplate" data="{{categoryTitle,...inTheaters}}"/>
+  </view>
+  <view>
+    <template is="movieListTemplate" data="{{categoryTitle,...comingSoon}}"/>
+  </view>
+  <view>
+    <template is="movieListTemplate" data="{{categoryTitle,...top250}}"/>
+  </view>
+</view>
+<!-- 搜索视图 -->
+<view wx:if="{{searchPanelShow}}" class="search-panel">
+  <image class="no-search-img" src="/source/images/icon/movies.png" wx:if="{{searchResultState}}" />
+  <template is="movieGridTemplate" data="{{...searchResult}}" />
+</view>
