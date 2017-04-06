@@ -1,0 +1,56 @@
+<view class="self-container">
+  <view class="header">
+    <icon type="info" />
+    <text>About</text>
+  </view>
+  <view class="list-container">
+    <view class="list-item">
+      <image src="/source/images/icon/name.png"></image>
+      <text>{{name}}</text>
+    </view>
+    <view class="list-item">
+      <image src="/source/images/icon/from.png"></image>
+      <text>{{come}}</text>
+    </view>
+    <view class="list-item">
+      <image src="/source/images/icon/tel.png"></image>
+      <text>{{tel}}</text>
+    </view>
+    <view class="list-item">
+      <image src="/source/images/icon/email.png"></image>
+      <text>{{email}}</text>
+    </view>
+    <view class="list-item">
+      <image src="/source/images/icon/school.png"></image>
+      <text>{{graduated}}</text>
+    </view>
+    <view class="list-item">
+      <image src="/source/images/icon/major.png"></image>
+      <text>{{major}}</text>
+    </view>
+    <view class="list-item skills">
+      <view class="list-item">
+        <image class="skill-head-img" src="/source/images/icon/skills.png"></image>
+        <text>Skills:</text>
+      </view>
+
+      <view class="skills-icon-container">
+        <image wx:for="{{skill}}" wx:key="skill" wx:for-item="skill" src="/source/images/icon/{{skill}}.png"></image>
+      </view>
+    </view>
+    <view class="list-item">
+      <image src="/source/images/icon/salary.png"></image>
+      <text>{{want}}</text>
+    </view>
+    <view class="list-item">
+      <image src="/source/images/icon/address.png"></image>
+      <text>{{address}}</text>
+    </view>
+  </view>
+  <map id="map" longitude="{{map.longitude}}" latitude="{{map.latitude}}" scale="{{map.scale}}"
+       markers="{{map.marker}}" bindmarktap="markertap" polyline="{{map.polyline}}"
+       position="{{map.position}}" style="width:100%;height:400rpx;"
+       bindmarkertap="markertap" bindregionchange="regionchange">
+
+  </map>
+</view>

@@ -1,5 +1,5 @@
 var postsData = require("../../data/posts-data");
-
+//onReachBottom
 
 Page({
     onPostTap:function(event){
