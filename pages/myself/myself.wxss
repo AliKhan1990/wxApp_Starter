@@ -1,0 +1,47 @@
+.self-container{
+  width:90%;
+  margin:20rpx auto;
+  font-size: 24rpx;
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  font-size: 40rpx;
+  color: #000;
+}
+.header text{
+  padding-left:30rpx;
+}
+.list-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  margin: 30rpx;
+  width: 100%;
+}
+.skills{
+  flex-direction: column;
+}
+.list-item>image,.skill-head-img{
+  width: 50rpx;
+  height:50rpx;
+  margin-right: 30rpx;
+}
+.skills-icon-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width:400rpx;
+
+}
+.skills-icon-container image{
+  width:70rpx;
+  height:70rpx;
+  margin:30rpx;
+}

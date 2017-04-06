@@ -1,7 +1,7 @@
 <import src="post-item/post-item-template" />
 <view class="news-container">
     <swiper bindtap="onSwiperTap" vertical="{{false}}" indicator-dots="true" autoplay="true">
-        <swiper-item><image data-postId="4" src="/source/images/iqiyi.png"></image></swiper-item>
+        <swiper-item><image data-postId="0" src="/source/images/iqiyi.png"></image></swiper-item>
         <swiper-item><image data-postId="3" src="/source/images/vr.png"></image></swiper-item>
         <swiper-item><image data-postId="2" src="/source/images/wx.png"></image></swiper-item>
     </swiper>

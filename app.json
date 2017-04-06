@@ -6,9 +6,9 @@
     "pages/douban-films/douban-movies",
     "pages/douban-films/douban-more-movies/more-movies",
     "pages/douban-films/douban-movie-detail/movie-detail",
+    "pages/douban-books/douban-books",
     "pages/myself/myself",
-    "pages/camera-scan/scan",
-    "pages/douban-books/douban-books"
+    "pages/camera-scan/scan"
   ],
   "window":{
     "navigationBarBackgroundColor":"#b0d1bd"

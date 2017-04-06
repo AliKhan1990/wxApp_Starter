@@ -1,1 +1,28 @@
 /* pages/douban-books/douban-books.wxss */
+page{
+  font-size: 30rpx;
+}
+.head-text{
+  font-size: 40rpx;
+  line-height: 90rpx;
+}
+.form{
+  width:90%;
+  margin:0 auto;
+}
+.section{
+  display: flex;
+  vertical-align: center;
+  align-items: center;
+  min-height:100rpx;
+}
+.section_gap{
+  display: block;
+}
+.section__title{
+  padding-right: 10rpx;
+}
+input[name="input"]{
+  border:1px solid #eee;
+  border-radius: 5rpx;
+}
