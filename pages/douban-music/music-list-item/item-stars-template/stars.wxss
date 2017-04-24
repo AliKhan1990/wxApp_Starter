@@ -1,0 +1,27 @@
+.star-cantainer{
+  display: flex;
+  flex-direction: column;
+}
+.stars{
+  display: flex;
+  flex-direction: row;
+  height:17rpx;
+  margin-right: 24rpx;
+}
+.stars image{
+  padding-left:3rpx;
+  height:17rpx;
+  width:17rpx;
+}
+.star-score{
+  color:#1f3463;
+  font-size: 17rpx;
+  margin-left:15rpx;
+}
+.movieClass{
+  font-size: 17rpx;
+  color:#ddd;
+}
+.movieClass text{
+  padding-right: 12rpx;
+}

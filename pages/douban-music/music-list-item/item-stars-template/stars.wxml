@@ -1,0 +1,13 @@
+<template name="starsTemplate">
+  <view class="star-cantainer">
+    <view class="stars">
+      <block wx:for="{{average}}" wx:for-item="istar" wx:key="star">
+        <image wx:if="{{istar==1}}" src="/source/images/icon/star.png"></image>
+        <image wx:elif="{{istar==2}}" src="/source/images/icon/half-star.png"></image>
+        <image wx:else src="/source/images/icon/none-star.png"></image>
+      </block>
+      <text class="star-score">{{rating?rating:"暂无评分"}}分</text>
+      <text class="star-score">({{numrat?numrat:"NONE"}}人评价)</text>
+    </view>
+  </view>
+</template>

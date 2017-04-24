@@ -1,0 +1,19 @@
+<import src="music-list-item/list-item.wxml" />
+<view class="music-container">
+  <view class="search">
+    <icon class="search-img" type="search" size='13' color="#405f80"></icon>
+    <input class="search-input" type="text" placeholder="Tokyo Hot" placeholder-class="placeholder" confirm-type="search" bindfocus="onBindFocus" bindblur="onBindBlur" bindconfirm="onBindConfirm" />
+    <image src="/source/images/icon/xx.png" class="xx-img" bindtap="onCancelXTap" />
+  </view>
+  <scroll-view  class="music-item"
+                scroll-y="true"
+                bindscrolltolower = "onScrollLower"
+                >
+    <block wx:for="{{musicData}}" wx:for-item="music" wx:key="msc">
+      <template is="musicListItem" data="{{...music}}"></template>
+    </block>
+  </scroll-view>
+  <view class="search-mot">
+    text
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<import src="item-stars-template/stars.wxml" />
+<template name="musicListItem">
+  <view class="music-list-item">
+    <view class="list-item-image">
+     <image src="{{image}}"></image>
+    </view>
+    <view class="text-container">
+      <text class="title" data-musicId="{{id}}">{{title}}</text>
+      <text>{{media}}/{{publisher}}/{{ctime}}/{{version}}/{{singer_o}}|{{singer_e}}</text>
+      <view class="stars">
+        <template is="starsTemplate" data="{{average,rating,numrat}}"></template>
+      </view>
+    </view>
+  </view>
+</template>

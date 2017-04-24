@@ -1,12 +1,18 @@
 function convertToStarsArray(stars) {
+  if(typeof stars=="string"){
+    stars=Math.floor(stars/2*10);
+  }
   var num = stars.toString().substring(0, 1);
   var halfStarFlag = false;
-  if(stars.toString().substring(1, 2)==5){
+  var fullStarFlag = false;
+  if(stars.toString().substring(1, 2)<=5 && stars.toString().substring(1, 2)>0){
       halfStarFlag = true;
+  }else if(stars.toString().substring(1, 2)<=9 && stars.toString().substring(1, 2)>5){
+      fullStarFlag = true;
   }
   var array = [];
   for (var i = 1; i <= 5; i++) {
-    if (i <= num) {
+    if (i <= num || fullStarFlag==true && i==num*1+1) {
       array.push(1);
     }else if (halfStarFlag==true && i==num*1+1) {
       array.push(2)
