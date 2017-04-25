@@ -52,7 +52,7 @@
     <text class="cast-font"> 影人</text>
     <scroll-view class="cast-imgs" scroll-x="true" style="width:100%">
       <block wx:for="{{movie.castsInfo}}" wx:for-item="item" wx:key="casts">
-        <view class="cast-container">
+        <view class="cast-container" data-castId="{{item.id}}" catchtap="castTap">
           <image class="cast-img" src="{{item.img}}"></image>
           <text class="cast-name">{{item.name}}</text>
         </view>

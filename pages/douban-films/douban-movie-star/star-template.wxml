@@ -7,7 +7,7 @@
       <image wx:else src="/source/images/icon/none-star.png"></image>
     </block>
 
-    <text class="star-score">{{average?average:"暂无评分"}}</text>
+    <text class="star-score">{{average?average:"暂无评分"}}分</text>
   </view>
     <view class="movieClass">
       <block wx:for="{{movieKind}}" wx:key="movieKind" wx:for-item="class">
