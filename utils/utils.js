@@ -1,5 +1,5 @@
 function convertToStarsArray(stars) {
-  if(typeof stars=="string"){
+  if(typeof stars=="string" && parseInt(stars)<10){
     stars=Math.floor(stars/2*10);
   }
   var num = stars.toString().substring(0, 1);
@@ -99,7 +99,8 @@ function convertToCastInfos(casts) {
   for (var idx in casts) {
     var cast = {
       img: casts[idx].avatars ? casts[idx].avatars.large : "",
-      name: casts[idx].name
+      name: casts[idx].name,
+      id:casts[idx].id
     }
     castsArray.push(cast);
   }

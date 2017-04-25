@@ -6,7 +6,9 @@
     "pages/douban-films/douban-movies",
     "pages/douban-films/douban-more-movies/more-movies",
     "pages/douban-films/douban-movie-detail/movie-detail",
+    "pages/douban-films/douban-movie-detail/cast-detail/cast",
     "pages/douban-music/douban-music",
+    "pages/douban-music/music-detail/music-detail",
     "pages/myself/myself",
     "pages/camera-scan/scan"
   ],

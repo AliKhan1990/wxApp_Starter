@@ -43,6 +43,7 @@ class Movie{
       }
     //数据初始化
     this.cb(movieInfo);
+    console.log(movieInfo.castsInfo);
   }
 }
 

@@ -36,10 +36,12 @@ Page({
     }
     console.log(this.data.startCont, this.data.dataCount, reURL);
   },
-  onBindBlur:function(){
-
-  },
+  onBindBlur:function(){},
   onCancelXTap:function(){},
+  abulmTap:function(event){
+    let id = event.target.dataset.musicid;
+    console.log(id);
+  },
   onBindConfirm: function (event) {
     let that = this;
     //比较用户输入是否无差别

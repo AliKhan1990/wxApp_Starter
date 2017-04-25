@@ -1,0 +1,20 @@
+
+<!--pages/douban-films/douban-movie-detail/cast-detail/cast.wxml-->
+<import src="../../douban-movie-item/movie-item-template.wxml" />
+<view class="cast-container" data="{{castInfo}}">
+  <image class="avatar-bk" src="{{castInfo.avatar}}"></image>
+  <image class="user-avatar" src="{{castInfo.avatar}}"></image>
+  <view class="cast-info-top">
+    <text>{{castInfo.name}}</text>
+    <text>{{castInfo.name_en}}</text>
+    <text>{{castInfo.aka}}</text>
+    <text>{{castInfo.born}}</text>
+  </view>
+  <view class="works-container">
+    <block wx:for="{{castInfo.works}}" wx:for-item="work" wx:key="work">
+      <view class="work">
+        <template is="movieItemTemplate" data="{{...work}}"></template>
+      </view>
+    </block>
+  </view>
+</view>
