@@ -1,6 +1,7 @@
 @import "music-list-item/list-item.wxss";
 .music-item{
   padding-top: 80rpx;
+  height: 100%;
 }
 .music-list-item{
     display: flex;
@@ -31,6 +32,7 @@
 .search{
   position: fixed;
   display: flex;
+  z-index: 10;
   flex-direction: row;
   height: 80rpx;
   width: 100%;
