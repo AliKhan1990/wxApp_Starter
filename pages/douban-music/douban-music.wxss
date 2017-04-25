@@ -1,0 +1,74 @@
+@import "music-list-item/list-item.wxss";
+.music-item{
+  padding-top: 80rpx;
+  height: 100%;
+}
+.music-list-item{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px dashed #d1d1d1;
+}
+.list-item-image{
+    width:200rpx;
+    height: 200rpx;
+}
+.list-item-image image{
+  width: 90%;
+  height: 90%;
+  padding: 10rpx 10rpx;
+}
+.music-list-item .text-container{
+    width: 80%;
+    font-size: 30rpx;
+    display: flex;
+    flex-direction: column;
+}
+.music-list-item .text-container .title{
+  color:#37a;
+  font-size: 35rpx;
+  padding: 10rpx 0;
+}
+/*搜索框样式*/
+.search{
+  position: fixed;
+  display: flex;
+  z-index: 10;
+  flex-direction: row;
+  height: 80rpx;
+  width: 100%;
+  margin-top: 3rpx;
+  background: white;
+}
+.search-img{
+  margin:auto 0 auto 20px;
+}
+.search input{
+  height: 100%;
+  width: 575rpx;
+  margin-left:20rpx;
+  font-size: 28rpx;
+}
+.placeholder{
+  font-size: 14px;
+  color:#d1d1d1;
+  margin-left: 20rpx;
+}
+.search-panel{
+  position: absolute;
+  top:80rpx;
+}
+.xx-img{
+  height: 30rpx;
+  width: 30rpx;
+  margin: auto 0 auto 10rpx;
+}
+.no-search-img{
+  width: 250rpx;
+  height: 250rpx;
+  margin: 280rpx 0 0 280rpx;
+}
+.search-input{
+    border-radius: 50rpx;
+    border:1px #eee solid;
+    padding-left: 25rpx;
+}

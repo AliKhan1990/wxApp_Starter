@@ -12,6 +12,7 @@ class Movie{
     http(this.url,this.processDoubanData.bind(this),true);
   }
   processDoubanData(data){
+    console.log(data)
     //导演信息处理
     let director = {
       avatar:"",
@@ -28,8 +29,9 @@ class Movie{
         movieImg:data.images ? data.images.large : "",
         country:data.countries[0],
         title:data.title,
+        commentCont:data.comments_count,
         originalTitle:data.original_title,
-        wishCount:data.comments_count,
+        wishCount:data.collect_count,
         year:data.year,
         genres:data.genres.join("、"),
         stars:stars(data.rating.stars),
