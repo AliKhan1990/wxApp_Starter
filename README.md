@@ -63,15 +63,15 @@ wxApp_Starter//ROOT
        └─ utils.js
 ```
 2.业务流程图(work flow)
-    ![image](https://lh3.google.com/u/0/d/0B-kC7VH695R9VW41MmFpNFR5cm8=w2542-h1292-iv3)
+    ![image](./source/preview/printme.png)
 
 3.预览图(preview)
-    ![image](https://https://lh3.google.com/u/0/d/0B-kC7VH695R9VEx6TDVCMzAtVWc=w2542-h1292-iv1)
-    ![image](https://lh3.google.com/u/0/d/0B-kC7VH695R9SHp6T2RNWGxycUU=w2542-h1292-iv1)
-    ![image](https://lh3.google.com/u/0/d/0B-kC7VH695R9SXZrcVJ1WHFQcnc=w2542-h1292-iv1)
-    ![image](https://lh3.google.com/u/0/d/0B-kC7VH695R9WWJBVkZvdHBXdms=w2542-h1292-iv1)
-    ![image](https://lh3.google.com/u/0/d/0B-kC7VH695R9WWJBVkZvdHBXdms=w2542-h1292-iv1)
-    ![image](https://lh3.google.com/u/0/d/0B-kC7VH695R9WWJBVkZvdHBXdms=w2542-h1292-iv1)
+    ![image](./source/preview/WechetIMG41.jpeg)
+    ![image](./source/preview/WechetIMG42.jpeg)
+    ![image](./source/preview/WechetIMG43.jpeg)
+    ![image](./source/preview/WechetIMG44.jpeg)
+    ![image](./source/preview/WechetIMG45.jpeg)
+    ![image](./source/preview/WechetIMG46.jpeg)
 
 4.fixed:
 
