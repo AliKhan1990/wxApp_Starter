@@ -1,29 +1,29 @@
 ### 说明
 
-1. 目录结构：
+1. 目录结构(directory structure)：
     
 ```
 wxApp_Starter//ROOT
-├─ app.js//App全局变量及全局参数
+├─ app.js//App全局变量及全局参数(global variable & global parameter)
 ├─ app.json//page()/window参数/tabar设置
 ├─ app.wxss
-├─ data//posts新闻页面模拟数据
+├─ data//posts新闻页面虚拟数据(news page virtual data)
 │    └─ posts-data.js
 ├─ pages//pages Root
-│    ├─ camera-scan//scan页面表单及摄像头接口调用
+│    ├─ camera-scan//scan页面表单及摄像头接口示例(form & wxCamera api example)
 │    │    ├─ scan.js
 │    │    ├─ scan.json
 │    │    ├─ scan.wxml
 │    │    └─ scan.wxss
-│    ├─ douban-books//豆瓣书籍(未做)
-│    │    ├─ douban-books.js
-│    │    ├─ douban-books.json
-│    │    ├─ douban-books.wxml
-│    │    └─ douban-books.wxss
-│    ├─ douban-films//豆瓣电影
-│    │    ├─ douban-more-movies//更多电影
-│    │    ├─ douban-movie-detail//电影详情页
-│    │    ├─ douban-movie-grid//电影九宫格－模版
+│    ├─ douban-music//豆瓣音乐🎵(原豆瓣图书->搜索功能实现|music search page)
+│    │    ├─ douban-music.js
+│    │    ├─ douban-music.json
+│    │    ├─ douban-music.wxml
+│    │    └─ douban-music.wxss
+│    ├─ douban-films//豆瓣电影🎬（新增影人详情）
+│    │    ├─ douban-more-movies//更多电影(more movie)
+│    │    ├─ douban-movie-detail//电影详情页(movie detail)
+│    │    ├─ douban-movie-grid//电影九宫格－模版(search result page)
 │    │    ├─ douban-movie-item//单个电影－模版
 │    │    ├─ douban-movie-list//电影列表－模版
 │    │    ├─ douban-movie-star//电影评分－模版
@@ -36,19 +36,19 @@ wxApp_Starter//ROOT
 │    │    ├─ myself.json
 │    │    ├─ myself.wxml
 │    │    └─ myself.wxss
-│    ├─ posts//新闻页面
+│    ├─ posts//新闻页面📰
 │    │    ├─ post-detail
 │    │    ├─ post-item
 │    │    ├─ post.js
 │    │    ├─ post.json
 │    │    ├─ post.wxml
 │    │    └─ post.wxss
-│    └─ welcome//欢迎页面
+│    └─ welcome//欢迎页面👏(welcome page)
 │           ├─ welcome.js
 │           ├─ welcome.json
 │           ├─ welcome.wxml
 │           └─ welcome.wxss
-├─ source//媒体资源
+├─ source//媒体资源📺
 │    ├─ .DS_Store
 │    └─ images
 │           ├─ .DS_Store
@@ -59,13 +59,30 @@ wxApp_Starter//ROOT
 │           ├─ post
 │           ├─ vr.png
 │           └─ wx.png
-└─ utils//工具组件
+└─ utils//工具组件🔧
        └─ utils.js
 ```
-2.业务流程图
-    ![image](https://lh3.googleusercontent.com/0c1KbjPghE_nxFePmW8tJWhti0CdUnIK88DlSDAFfoOnJIvH_bJiKRfWidv1t-jIm11j-XpQpKqwTPanZxqo7DcexZi7dbUfmPGyaRm6se_jEnH5nPqXrwYx4I7VrdzuVcswXjpc31XsAajjBeYXvhZ917FY1uW6elxB2Pa60Acw85NVC-5wG4rIkouTsXCE7-2nN8M_jDUTStbXkwTFZFW2FdTPevPUUgsl0rR4MyR-unnsX2s5W1lrHUtMqYYuI10XN11DqwDchZQNuXj6HsXzxy_Y1ckCVBctUSSBY0W-iK8oxpvi-s0a-vaxsmsvw2t7Uw9iR4fFmh8hwpNPtFsx3yuv9E5W5TsTFmcKp1Zb08TtA6e22zCM8sp9AAXusmgSHfDaNb_elgyI3AabOSjVh3uijTaCYnpb6rVsue_1KRjW0_vthgqinPfoWnk-JJQEJfwanpQFI185dJrgtEvhe7Ai68Gl5dX8eTldZrHKM7l_0w6keHXyonnZkg-KyvMov41BjIWAL6N8zARdpZY08wUXECSxW0GtQXWR0Y_7dKdrdILL7Nv4-YtMAa3GCirOaGRH=w2000-h2096)
+2.业务流程图(work flow)
+    ![image](https://lh3.google.com/u/0/d/0B-kC7VH695R9VW41MmFpNFR5cm8=w2542-h1292-iv3)
+
+3.预览图(preview)
+    ![image](https://https://lh3.google.com/u/0/d/0B-kC7VH695R9VEx6TDVCMzAtVWc=w2542-h1292-iv1)
+    ![image](https://lh3.google.com/u/0/d/0B-kC7VH695R9SHp6T2RNWGxycUU=w2542-h1292-iv1)
+    ![image](https://lh3.google.com/u/0/d/0B-kC7VH695R9SXZrcVJ1WHFQcnc=w2542-h1292-iv1)
+    ![image](https://lh3.google.com/u/0/d/0B-kC7VH695R9WWJBVkZvdHBXdms=w2542-h1292-iv1)
+    ![image](https://lh3.google.com/u/0/d/0B-kC7VH695R9WWJBVkZvdHBXdms=w2542-h1292-iv1)
+    ![image](https://lh3.google.com/u/0/d/0B-kC7VH695R9WWJBVkZvdHBXdms=w2542-h1292-iv1)
+
+4.fixed:
+
+    - 2017.4.23:将下拉刷新onPullDownRefresh-->onReachBottom
+
+4.add:
+
+ - 增加专辑详情页💽
+ - 增加音乐搜索为空判断
 
 
-3.版本：**0.15.12900**
+5.版本(dev tool version)：**0.15.12900**
 
-4.API：[doubanAPI v2](https://www.douban.com/group/dbapi/) [MINA](https://mp.weixin.qq.com/debug/wxadoc/dev/)
+6.API：[doubanAPI v2](https://www.douban.com/group/dbapi/) /[MINA](https://mp.weixin.qq.com/debug/wxadoc/dev/)
