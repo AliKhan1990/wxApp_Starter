@@ -66,8 +66,8 @@ wxApp_Starter//ROOT
     ![image](./source/preview/printme.png)
 
 3.预览图(preview)
-    ![image](./source/preview/prev01.png)
     ![image](./source/preview/prev02.png)
+    ![image](./source/preview/prev01.png)
 
 4.fixed:
 
