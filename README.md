@@ -66,12 +66,12 @@ wxApp_Starter//ROOT
     ![image](./source/preview/printme.png)
 
 3.预览图(preview)
-    ![image](./source/preview/WechetIMG41.jpeg)
-    ![image](./source/preview/WechetIMG42.jpeg)
-    ![image](./source/preview/WechetIMG43.jpeg)
-    ![image](./source/preview/WechetIMG44.jpeg)
-    ![image](./source/preview/WechetIMG45.jpeg)
-    ![image](./source/preview/WechetIMG46.jpeg)
+    ![image](./source/preview/WechatIMG41.jpeg)
+    ![image](./source/preview/WechatIMG42.jpeg)
+    ![image](./source/preview/WechatIMG43.jpeg)
+    ![image](./source/preview/WechatIMG44.jpeg)
+    ![image](./source/preview/WechatIMG45.jpeg)
+    ![image](./source/preview/WechatIMG46.jpeg)
 
 4.fixed:
 
