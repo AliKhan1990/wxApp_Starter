@@ -2,7 +2,7 @@
 <import src="douban-movie-grid/movie-grid-template" />
 <view class="search">
   <icon class="search-img" type="search" size='13' color="#405f80"></icon>
-  <input type="text" placeholder="美女与野兽"
+  <input type="text" placeholder="红海行动"
          placeholder-class="placeholder" confirm-type="搜索"
          bindfocus="onBindFocus" bindblur="onBindBlur" bindconfirm="onBindConfirm" />
   <image src="/source/images/icon/xx.png" class="xx-img" bindtap="onCancelXTap" />

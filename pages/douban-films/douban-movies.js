@@ -4,7 +4,6 @@ var utils = require("../../utils/utils.js");
 var http = utils.http;
 
 Page({
-
   onLoad:function(event){
     this.setData({
       containerShow:true,

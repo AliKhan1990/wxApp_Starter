@@ -1,9 +1,10 @@
 App({
   globalData:{
+    // http://m.maoyan.com/movie/list.json?type=hot&offset=0&limit=1000
     g_currentMusikPlayingId:null,
     g_isMusicPlaying:false,
     g_getPostsColleted:wx.getStorageSync("posts_collected"),
-    g_doubanAPI:"https://api.douban.com/"
+    g_doubanAPI:"https://douban.uieee.com"
   },
   //应用启动
   onLaunch:function(){
